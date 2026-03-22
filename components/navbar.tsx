@@ -4,15 +4,16 @@ import { useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Menu, Zap } from "lucide-react"
+import { Menu, Phone, Shield } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   const navItems = [
-    { label: "Features", href: "#features" },
-    { label: "Use Cases", href: "#use-cases" },
+    { label: "What We Do", href: "#what-is-dv" },
+    { label: "How It Works", href: "#how-it-works" },
+    { label: "About Us", href: "#about" },
     { label: "Testimonials", href: "#testimonials" },
     { label: "Contact", href: "#contact" },
   ]
@@ -21,8 +22,11 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
-          <Link href="/" className="flex items-center space-x-2" aria-label="Enterprise AI Homepage">
-            <span className="text-2xl font-bold">AI Enterprise</span>
+          <Link href="/" className="flex items-center space-x-2" aria-label="ClaimShield DV Homepage">
+            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
+              <Shield className="h-5 w-5 text-primary-foreground" />
+            </div>
+            <span className="text-xl font-bold">ClaimShield DV</span>
           </Link>
         </div>
 
@@ -39,14 +43,11 @@ export default function Navbar() {
 
           <Button
             asChild
-            className="hidden md:flex items-center gap-3 px-4 py-2 bg-[#1a1d21] hover:bg-[#2a2d31] text-white rounded-xl border-0 h-auto dark:bg-primary dark:hover:bg-primary/90 dark:shadow-[0_0_10px_rgba(36,101,237,0.4)]"
+            className="hidden md:flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl border-0 h-auto"
           >
-            <Link href="#contact">
-              <Zap className="h-4 w-4 text-white" />
-              <div className="flex flex-col items-start">
-                <span className="text-sm font-medium">Request Demo</span>
-                <span className="text-xs text-gray-400 dark:text-gray-300 -mt-0.5">v1.0.0</span>
-              </div>
+            <Link href="tel:8502011950">
+              <Phone className="h-4 w-4" />
+              <span className="text-sm font-medium">(850) 201-1950</span>
             </Link>
           </Button>
 
@@ -71,19 +72,16 @@ export default function Navbar() {
                 ))}
                 <div className="flex items-center gap-4 mt-4">
                   <ThemeToggle />
-                  <Button
-                    asChild
-                    className="w-full flex items-center gap-3 px-4 py-2 bg-[#1a1d21] hover:bg-[#2a2d31] text-white rounded-xl border-0 h-auto dark:bg-primary dark:hover:bg-primary/90 dark:shadow-[0_0_10px_rgba(36,101,237,0.4)]"
-                  >
-                    <Link href="#contact" onClick={() => setIsOpen(false)}>
-                      <Zap className="h-4 w-4 text-white" />
-                      <div className="flex flex-col items-start">
-                        <span className="text-sm font-medium">Request Demo</span>
-                        <span className="text-xs text-gray-400 dark:text-gray-300 -mt-0.5">v1.0.0</span>
-                      </div>
-                    </Link>
-                  </Button>
                 </div>
+                <Button
+                  asChild
+                  className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl border-0 h-auto mt-4"
+                >
+                  <Link href="tel:8502011950" onClick={() => setIsOpen(false)}>
+                    <Phone className="h-4 w-4" />
+                    <span className="text-sm font-medium">(850) 201-1950</span>
+                  </Link>
+                </Button>
               </nav>
             </SheetContent>
           </Sheet>

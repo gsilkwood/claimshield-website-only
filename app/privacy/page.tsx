@@ -7,7 +7,7 @@ import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Enterprise AI Platform",
+  title: "Privacy Policy | ClaimShield DV",
   description: "Our commitment to protecting your privacy and securing your data.",
 }
 
@@ -36,16 +36,16 @@ export default function PrivacyPolicy() {
             </div>
 
             <PrivacyPolicyTemplate
-              companyName="AI Enterprise"
-              websiteUrl="https://aienterprise.com"
-              contactEmail="privacy@aienterprise.com"
-              contactAddress={`AI Enterprise, Inc.\n123 AI Boulevard\nTech City, CA 94000\nUnited States`}
+              companyName="ClaimShield DV"
+              websiteUrl="https://claimshielddv.com"
+              contactEmail="privacy@claimshielddv.com"
+              contactAddress={`ClaimShield DV\nUnited States`}
               lastUpdated={currentDate}
-              includeGDPR={true}
+              includeGDPR={false}
               includeCCPA={true}
               includeCookies={true}
               includeAnalytics={true}
-              includeThirdPartyServices={["OpenAI", "Google Analytics", "AWS", "Microsoft Azure"]}
+              includeThirdPartyServices={["Google Analytics"]}
             />
           </div>
         </section>
