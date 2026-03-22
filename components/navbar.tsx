@@ -13,8 +13,8 @@ export default function Navbar() {
   const navItems = [
     { label: "What We Do", href: "#what-is-dv" },
     { label: "How It Works", href: "#how-it-works" },
+    { label: "State Laws", href: "#state-laws" },
     { label: "About Us", href: "#about" },
-    { label: "Testimonials", href: "#testimonials" },
     { label: "Contact", href: "#contact" },
   ]
 

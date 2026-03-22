@@ -10,6 +10,7 @@ import FramerSpotlight from "@/components/framer-spotlight"
 import CssGridBackground from "@/components/css-grid-background"
 import FeaturesSection from "@/components/features-section"
 import StructuredData from "@/components/structured-data"
+import StateLawLibrary from "@/components/state-law-library"
 
 export default function Home() {
   return (
@@ -179,6 +180,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* 50-State Law Library */}
+        <StateLawLibrary />
 
         {/* Who We Serve */}
         <UseCases />
